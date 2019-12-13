@@ -1,13 +1,11 @@
 .plate {
-  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
   width: 130px;
-  height: 95px;
+  height: 70px;
   background: white;
   margin: 1em;
   padding: 20px 5px 20px 5px;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
   border-radius: 10px;
   box-shadow: /* Outer Plate Bevel */
   inset 0 5px 3px 0 rgba(180, 166, 166, 0.5), /* Top */

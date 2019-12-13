@@ -12,21 +12,21 @@
 <hr />
 
 <div class="belt">
-  <div class="belt-part" *ngFor="let p of platesOnBelt">
+  <div class="belt-part" *ngFor="let p of platesOnBelt" [id]="'plate-' + p.id">
     <app-plate [data]="p"></app-plate>
   </div>
 </div>
 
 <hr />
 
-<div class="table">
-  <div *ngIf="want" class="big-person">
+<div class="seat">
+  <div *ngIf="want" class="big-person want">
     🙋🏼‍♀️
   </div>
   <div *ngIf="!want" class="big-person">
     🙇🏼‍♀️
   </div>
-  <div *ngIf="currentPlate">
+  <div *ngIf="currentPlate" class="desk">
     <app-plate [data]="currentPlate"></app-plate>
   </div>
 </div>

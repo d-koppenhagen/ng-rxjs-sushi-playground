@@ -4,10 +4,10 @@ p {
 
 .belt {
   background-color: grey;
-  overflow-x: scroll;
-  white-space: nowrap;
   min-height: 130px;
-  min-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: scroll;
 }
 
 .belt-part {
@@ -20,6 +20,15 @@ p {
   margin-bottom: -40px;
 }
 
-.table {
-  text-align: center;
+.seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desk {
+  background: #aaaaaa;
+  padding: 20px;
+  border-radius: 100px / 50px;
+  z-index: -1;
 }

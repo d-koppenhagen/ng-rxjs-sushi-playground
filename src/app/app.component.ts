@@ -12,6 +12,7 @@ import {
 } from 'rxjs/operators';
 
 import { SushiWithSoja, sushiBelt$, soja$, iWantThis, getSushiFromPlate, Plate } from './helpers';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -19,12 +20,13 @@ import { SushiWithSoja, sushiBelt$, soja$, iWantThis, getSushiFromPlate, Plate }
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  platesOnBelt: Plate[] = [];
-  want = false;
-  currentPlate: Plate = {
+  maxPlatesOnBelt = 5;
+  platesOnBelt: Plate[] = new Array(this.maxPlatesOnBelt).fill({
     contents: [],
     id: null,
-  };
+  });
+  want = false;
+  currentPlate: Plate = { contents: [], id: null };
   index = 0;
 
   sushi$: Observable<SushiWithSoja> = sushiBelt$.pipe(
@@ -45,11 +47,17 @@ export class AppComponent {
 
   stop$ = new Subject();
 
+  constructor(private vps: ViewportScroller) {}
+
   startSushi() {
     console.log('SUSHI STARTED 🍣🍣');
 
     sushiBelt$.pipe(takeUntil(this.stop$)).subscribe(plate => {
       console.log('🍽', plate.id, plate.contents);
+      this.vps.scrollToAnchor('plate-' + plate.id);
+      if (this.platesOnBelt.length >= this.maxPlatesOnBelt) {
+        this.platesOnBelt.shift();
+      }
       this.platesOnBelt.push(plate);
     });
 
