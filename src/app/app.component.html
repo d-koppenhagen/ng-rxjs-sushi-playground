@@ -1,15 +1,15 @@
-<h1>🍣 Sushi with RxJS</h1>
-
-<p>
-  Let's have some sushi! <strong>Open the console to get some.</strong> Feel free to change the
-  flatteing operator in the <code>index.ts</code> file to apply a different sushi flattening
-  strategy!
-</p>
-
-<button (click)="startSushi()">Start</button>
-<button (click)="stopSushi()">Stop</button>
-
-<hr />
+<div class="container">
+  <h1>🍣 Sushi with RxJS</h1>
+  <p>
+    Let's have some sushi! <strong>Open the console to get some.</strong> Feel free to change the
+    flatteing operator in the <code>index.ts</code> file to apply a different sushi flattening
+    strategy!
+  </p>
+  <div class="actions">
+    <button (click)="startSushi()">Start</button>
+    <button (click)="stopSushi()">Stop</button>
+  </div>
+</div>
 
 <div class="belt">
   <div class="belt-part" *ngFor="let p of platesOnBelt" [id]="'plate-' + p.id">
@@ -17,16 +17,16 @@
   </div>
 </div>
 
-<hr />
-
-<div class="seat">
-  <div *ngIf="want" class="big-person want">
-    🙋🏼‍♀️
-  </div>
-  <div *ngIf="!want" class="big-person">
-    🙇🏼‍♀️
-  </div>
-  <div *ngIf="currentPlate" class="desk">
-    <app-plate [data]="currentPlate"></app-plate>
+<div class="container">
+  <div class="seat">
+    <div *ngIf="want" class="big-person want">
+      🙋🏼‍♀️
+    </div>
+    <div *ngIf="!want" class="big-person">
+      🙇🏼‍♀️
+    </div>
+    <div *ngIf="currentPlate" class="desk">
+      <app-plate [data]="currentPlate"></app-plate>
+    </div>
   </div>
 </div>

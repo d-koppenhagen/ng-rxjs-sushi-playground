@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Impact", "Charcoal", sans-serif;
+}
+
+body {
+  background: url(assets/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0px;
+}
