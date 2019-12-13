@@ -1,6 +1,6 @@
-# NgRxjsSushi
+# ng-rxjs-sushi-playground
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.6.
+Just to play a bit around with rxjs and sushi 🍣
 
 ## Development server
 
