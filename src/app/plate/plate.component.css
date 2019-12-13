@@ -1,0 +1,19 @@
+.plate {
+  display: inline-block;
+  width: 130px;
+  height: 95px;
+  background: white;
+  margin: 1em;
+  padding: 20px 5px 20px 5px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: /* Outer Plate Bevel */
+  inset 0 5px 3px 0 rgba(180, 166, 166, 0.5), /* Top */
+  inset 0 -5px 3px 0 rgba(0, 0, 0, .78), /* Bottom */
+  inset 3px 0 2px 0 rgba(0, 0, 0, .25), /* Left */
+  inset -3px 0 2px 0 rgba(0, 0, 0, .25), /* Right */
+  /* Outer Plate Shadow */
+  inset 0 5px 46px 0 rgba(0, 0, 0, .4), 0 5px 13px 0 rgba(0, 0, 0, .75);
+}

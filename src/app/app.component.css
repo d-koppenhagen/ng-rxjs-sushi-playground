@@ -1,0 +1,25 @@
+p {
+  font-family: Lato;
+}
+
+.belt {
+  background-color: grey;
+  overflow-x: scroll;
+  white-space: nowrap;
+  min-height: 130px;
+  min-width: 100%;
+}
+
+.belt-part {
+  border-right: 4px dotted white;
+  display: inline-block;
+}
+
+.big-person {
+  font-size: 120px;
+  margin-bottom: -40px;
+}
+
+.table {
+  text-align: center;
+}
